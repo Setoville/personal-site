@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Typing from "react-typing-animation";
 import { ButtonGroup, Button, Fade } from "react-bootstrap";
+import Footer from "../components/Footer"
 
 const LinkButton = ({ to, children }) => (
   <Button
@@ -27,9 +28,11 @@ const LinkButtons = () =>
 
 const Welcome = () => {
   const [doneTyping, setDoneTyping] = useState(false)
+
+
   return (
     <>
-      <div style={centerStyle}>
+      <div style={{ ...centerStyle, ...bodyStyle }}>
         <div style={welcomeTextStyle}>
           <Typing onFinishedTyping={() => setDoneTyping(true)}>
             <h3>Welcome to Setoville!</h3>
@@ -37,30 +40,27 @@ const Welcome = () => {
           <LinkButtons />
         </div>
       </div>
-      <div style={footerStyle}>
+      <div style={centerStyle}>
         <Fade in={doneTyping} >
           <div>Read more...</div>
         </Fade>
       </div>
+      <Footer />
     </>
   )
 }
 
 const welcomeTextStyle = { textAlign: 'center' }
+
 const centerStyle = {
-  height: '80%',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center'
 }
-const footerStyle = {
-  height: '20%',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center'
+
+const bodyStyle = {
+  height: '90%'
 }
-
-
 
 export default Welcome;
