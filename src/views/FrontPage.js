@@ -3,7 +3,7 @@ import Welcome from "./Welcome";
 import AboutMe from "./AboutMe"
 
 
-//todo: dark mode button at the top? 
+//TODO: dark mode button at the top? 
 const FrontPage = () => {
   return (
     <>

@@ -29,7 +29,6 @@ const LinkButtons = () =>
 const Welcome = () => {
   const [doneTyping, setDoneTyping] = useState(false)
 
-
   return (
     <>
       <div style={{ ...centerStyle, ...bodyStyle }}>
@@ -40,7 +39,7 @@ const Welcome = () => {
           <LinkButtons />
         </div>
       </div>
-      <div style={centerStyle}>
+      <div style={centerStyle} >
         <Fade in={doneTyping} >
           <div>Read more...</div>
         </Fade>
@@ -52,7 +51,7 @@ const Welcome = () => {
 
 const welcomeTextStyle = { textAlign: 'center' }
 
-const centerStyle = {
+export const centerStyle = {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',

@@ -1,24 +1,27 @@
 import React from "react";
 
+import Footer from "../components/Footer";
+import { centerStyle } from "./Welcome";
+
 const AboutMe = () => {
   return (
-    <div style={centerStyle}>
-      <div>
-        <h1>About Me.</h1>
-      </div>
-      <div>
-        Loren Ipsum
-      </div>
-    </div >
+    <>
+      <div style={{ ...centerStyle, ...bodyStyle }}>
+        <div>
+          <h1>About Me.</h1>
+        </div>
+        <div>
+          Loren Ipsum
+        </div>
+      </div >
+      <Footer />
+    </>
   )
 }
-const centerStyle = {
-  height: '100%',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center'
+const bodyStyle = {
+  height: '90%'
 }
+
 
 
 
