@@ -1,4 +1,6 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+
 import FrontPage from './views/FrontPage';
 
 function App() {
